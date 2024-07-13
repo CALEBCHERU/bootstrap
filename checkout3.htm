@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.css">
+    <link src="node_modules/@popperjs">
+    <title>Check out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .form-section {
+            flex: 3;
+            padding: 20px;
+        }
+        .cart-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .gap-3 {
+            display: flex;
+            gap: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        figcaption {
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1 class="text-center">Check out Form</h1>
+            <div class="m-5">
+                <h2>Billing address</h2>
+                <div class="gap-3">
+                    <div class="form-group">
+                        <label for="firstname">First name</label>
+                        <input id="firstname" type="text" name="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last name</label>
+                        <input id="lastname" type="text" name="lastname">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input id="username" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email (optional)</label>
+                    <input id="email" type="email" name="email" placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="address1">Address</label>
+                    <input id="address1" type="text" name="address" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address 2 (optional)</label>
+                    <input id="address2" type="text" name="address2" placeholder="Apartment or suite">
+                </div>
+
+                <div class="gap-3">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input id="country" type="text" name="country">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input id="state" type="text" name="state">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip</label>
+                        <input id="zip" type="text" name="zip">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <input type="checkbox" name="same-address" id="same-address">
+                    <label for="same-address">Shipping address is the same as my billing address</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="save-info" id="save-info">
+                    <label for="save-info">Save this information for next time</label>
+                </div>
+
+                <hr>
+
+                <h1>Payment</h1>
+                <div class="form-group">
+                    <input type="radio" name="payment" value="card" id="credit">
+                    <label for="credit">Credit card</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="payment" value="card" id="debit">
+                    <label for="debit">Debit card</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="payment" value="paypal" id="paypal">
+                    <label for="paypal">PayPal</label>
+                </div>
+
+                <div class="gap-3">
+                    <div class="form-group">
+                        <label for="cardname">Name on card</label>
+                        <input id="cardname" type="text" name="cardname">
+                        <figcaption>Full name as displayed on card</figcaption>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardnumber">Credit card number</label>
+                        <input id="cardnumber" type="text" name="cardnumber">
+                    </div>
+                </div>
+
+                <div class="gap-3">
+                    <div class="form-group">
+                        <label for="expdate">Expiration</label>
+                        <input id="expdate" type="text" name="expdate">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="text" name="cvv">
+                    </div>
+                </div>
+
+                <button type="submit">Continue to checkout</button>
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <h1>Your cart</h1>
+            <!-- Add cart details here -->
+        </div>
+    </div>
+</body>
+</html>

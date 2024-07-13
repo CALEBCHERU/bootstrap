@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body id ="bd">
+    <header class="header el">Header</header>
+
+    <main class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box" >3
+            <button id="bt" onclick=sd()>button</button>
+        </div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </main>
+
+    <aside class="scrollbar el" id="nm">Scrollbar</aside>
+    <footer class="footer el">Footer</footer>
+    <script>
+        const bt = document.getElementById('bt');
+        const nm = document.getElementById('nm');
+        const bd = document.getElementById('bd');
+        function sd()  {
+            nm.style.backgroundColor ="red"
+            nm.style.gridArea = "" 
+            gridTemplateAreas =
+            "hd hd hd hd hd hd hd hd hd"
+            "mn mn mn mn mn mn mn mn mn"
+            "ft ft ft ft ft ft ft ft ft" 
+            
+        };
+    </script>
+</body>
+</html>

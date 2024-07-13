@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss\main.css">
+    <link src="node_modules\@popperjs" >
+    <title>Check out</title>
+</head>
+<body >
+    <style>
+        #id{
+            width: 100px;
+        }
+        input{
+            border-radius: 4px;
+        }
+    </style>
+
+    <div style="display: flex;" class="container bg-body-secondary m-3  ">
+        <div  >
+            <h1 class="text-center">Check out Form</h1>
+            <div class="m-5 ">
+                <h2>Billing address</h2>
+                <div class="gap-3" style="display: flex;" >
+                    <div>
+                        <label for="firstname">First name</label><br>
+                        <input size="40px"id="label" class="col-form-label mt-2  "   type="text" name="firstname">
+    
+                    </div>
+                    <div>
+                        <label for="lastname" >Last name</label><br>
+                        <input size="40px" class="col-form-label mt-2  " type="text" name="lastname">
+    
+                    </div>
+    
+                </div>
+                
+                
+                <br>
+                <label for="username">Username </label> <br>
+                <input size="88px" class="col-form-label  mt-2 mb-2" type="text" name="username" placeholder="Username">
+                <br>
+                <label for="email">Email(optional)</label> <br>
+                <input size="88px" class="col-form-label mt-2 mb-2" type="emil" name="email" placeholder="you@example.com"> 
+                <br>
+                <label for="adress1">Address</label> <br>
+                <input size="88px"  class="col-form-label mt-2 mb-2" type="text" name="address" placeholder="1234Man St">
+                <br>
+                <label for="address2">Address 2(optional)</label> <br>
+                <input size="88px" class="col-form-label mt-2 mb-2" type="text" name="address2" placeholder="Apertment or State">
+                <br>
+                <br>
+                <!-- style="display: flex;" -->
+                <div style="display: flex; gap:20px " class="mb-5" >
+                    <div>
+                        <label for="country">Country</label><br>
+                        <input class="col-form-label" type="text" name="country">
+    
+                    </div>
+    
+                    <div>
+                        
+                        <label for="state">State </label> <br>  
+                        <input class="col-form-label" type="text" name="state"> 
+    
+                    </div>
+    
+                    <div>
+                        <label for="firstname">Zip </label> <br>
+                        <input class="col-form-label" type="text" name="firstname">
+    
+                    </div>
+                   
+    
+                </div>
+    
+               
+                <div>
+                    <hr>
+                    
+                    <input  type="checkbox" name="save" id="" > Shipping address is the same as my billing address <br>
+                    <input  type="checkbox" name="save" id="" > Save this information for next time
+                    <hr>
+                </div>
+                <h1>Payment</h1>
+                <input  type="radio" name="payment" value="card" id=""> Credit card <br>
+                <input type="radio" name="payment" value="card" id=""> Debit card <br>
+                <input type="radio" name="payment" value="card" id=""> PayPal <br>
+    
+                <br>
+                <div class="gap-3" style="display: flex;" >
+                    <div>
+                        <label for="firstname">Name on card</label><br>
+                        <input size="40px"id="label" class="col-form-label mt-2  "   type="text" name="firstname">
+                        <figcaption style="color: rgb(135, 152, 152);">Full name as displayed on card</figcaption>
+    
+                    </div>
+                    <div>
+                        <label for="lastname" >Credit card number</label><br>
+                        <input size="40px" class="col-form-label mt-2  " type="text" name="lastname">
+    
+                    </div>
+    
+                </div>
+                <br>
+                <div class="gap-3 " style="display: flex;" >
+                    <div>
+                        <label for="firstname">Expiration</label><br>
+                        <input size="15px"id="label" class="col-form-label mt-2  "   type="text" name="firstname">
+    
+                    </div>
+                    <div>
+                        <label for="lastname" >Cvv</label><br>
+                        <input size="15px" class="col-form-label mt-2  " type="text" name="lastname">
+    
+                    </div> <br>
+                    
+    
+                </div>
+                <br>
+                <button width="1000px" class="btn btn-primary btn-lg col-10">Continue to checkout</button>
+    
+            </div>
+    
+            
+    
+            
+        </div>
+
+        <div style="">
+            <h1>Your cart</h1>
+
+        </div>
+        
+
+    </div>
+
+    
+    
+</body>
+</html>
